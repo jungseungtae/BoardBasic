@@ -19,12 +19,12 @@
 
 	<!-- 게시글 조회 -->
 	<select id="list" resultType="kr.co.vo.BoardVO">
-		SELECT BNO
-		, TITLE
-		, WRITER
-		, REGDATE
-		FROM MP_BOARD
-		ORDER BY BNO DESC
+		SELECT   BNO
+			   , TITLE
+			   , WRITER
+			   , REGDATE
+		  FROM MP_BOARD
+		  ORDER BY BNO DESC
 	</select>
 	
 	<!-- 게시물 조회 -->
@@ -58,7 +58,8 @@
 		SELECT  BNO,
 				TITLE,
 				CONTENT,
-				REGDATE
+				REGDATE,
+				WRITER
 		FROM (
 			SELECT  BNO,
 					TITLE,

@@ -28,6 +28,7 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public List<BoardVO> list(SearchCriteria scri) throws Exception {
 		return sqlSession.selectList("boardMapper.listPage", scri);
+		
 	}
 	
 //	게시물 총 갯수

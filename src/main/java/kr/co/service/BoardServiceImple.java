@@ -17,9 +17,11 @@ public class BoardServiceImple implements BoardService {
 	@Inject
 	private BoardDAO dao;
 	
+	
 	@Override
 	public void write(BoardVO boardVO) throws Exception {
 		dao.write(boardVO);
+		System.out.println(boardVO.getWriter());
 	}
 
 	@Override
